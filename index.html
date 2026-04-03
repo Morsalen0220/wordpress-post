@@ -3,282 +3,319 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Image Document Editing Services | Fast, Accurate & Confidential PDF Editing</title>
-  <meta name="description" content="Professional image document editing services for scanned PDF files, camera scans, downloaded PDFs, and locked PDFs. Fast delivery, clear pricing, and 24/7 support." />
-  <meta name="keywords" content="image document editing services, PDF editing service, scanned PDF edit, document text correction, international document editing" />
+  <title>Web Design Service 2026 | Modern UI, UX & Responsive Website Solutions</title>
+  <meta name="description" content="Professional web design service with detailed scope, pricing plans, workflow, quality standards, SEO-ready structure, and responsive implementation." />
+  <meta name="keywords" content="web design service, web design, responsive web design, modern website design, UI UX web design" />
   <meta name="robots" content="index, follow" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Web Design Service | UI/UX, Responsive & SEO-Focused" />
+  <meta property="og:description" content="Explore web design service details, pricing, process, and best practices for modern websites." />
+  <meta property="og:type" content="article" />
   <style>
-    :root{
-      --bg:#070d1a;
-      --bg-soft:#0f172a;
-      --card:#111a2f;
-      --card-2:#0d1426;
-      --line:#2a3956;
-      --text:#e6edf7;
-      --muted:#9fb0c8;
-      --brand:#22c55e;
-      --brand-2:#38bdf8;
-      --warn:#f59e0b;
-      --radius:18px;
-      --shadow:0 15px 35px rgba(0,0,0,.35);
+    :root {
+      --bg: #060d1f;
+      --card: #101d3a;
+      --card2: #0d1730;
+      --line: #355789;
+      --text: #e8f1ff;
+      --muted: #a8bcdd;
+      --brand: #22c55e;
+      --radius: 16px;
+      --shadow: 0 12px 26px rgba(0, 0, 0, .3);
     }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--text);
-      line-height:1.7;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.68;
       background:
-        radial-gradient(900px 450px at 8% -10%, rgba(34,197,94,.18), transparent 60%),
-        radial-gradient(900px 450px at 100% 0%, rgba(56,189,248,.16), transparent 55%),
-        linear-gradient(180deg,#020617,var(--bg));
+        radial-gradient(900px 430px at 8% -8%, rgba(56, 189, 248, .18), transparent 60%),
+        radial-gradient(900px 430px at 100% 0%, rgba(167, 139, 250, .16), transparent 58%),
+        linear-gradient(180deg, #040917, var(--bg));
     }
-    .container{width:min(1140px,92%);margin:auto}
+    .container { width: min(1120px, 92%); margin: auto; }
 
-    .hero{
-      padding:78px 0 40px;
-      text-align:center;
-      position:relative;
-      isolation:isolate;
+    .hero {
+      margin-top: 24px;
+      border: 1px solid #3a5f98;
+      border-radius: 20px;
+      background: linear-gradient(180deg, #111f3d, #0d1730);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      text-align: center;
+      transition: transform .24s ease, border-color .24s ease;
     }
-    .badge{
-      display:inline-flex;align-items:center;gap:8px;
-      background:rgba(56,189,248,.14);
-      color:#c9edff;
-      border:1px solid rgba(56,189,248,.35);
-      padding:8px 14px;border-radius:999px;font-size:.88rem;font-weight:600;
-      backdrop-filter:blur(8px);
-      animation:fadeUp .7s ease both;
-    }
-    h1{margin:.8rem 0 .9rem;font-size:clamp(2rem,4vw,3.25rem);line-height:1.15;animation:fadeUp .85s ease both}
-    .lead{max-width:780px;margin:0 auto 26px;color:var(--muted);font-size:1.04rem;animation:fadeUp 1s ease both}
+    .hero:hover { transform: translateY(-2px); border-color: #8cb4ef; }
 
-    .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;animation:fadeUp 1.1s ease both}
-    .btn{padding:12px 20px;border-radius:12px;text-decoration:none;font-weight:700;display:inline-block;transition:.22s}
-    .btn-primary{background:linear-gradient(120deg,#22c55e,#16a34a);color:#052e16;box-shadow:0 8px 20px rgba(34,197,94,.35)}
-    .btn-primary:hover{transform:translateY(-2px) scale(1.01)}
-    .btn-secondary{background:#15213a;color:#dbeafe;border:1px solid #32405d}
-    .btn-secondary:hover{transform:translateY(-2px);background:#1a2a49}
-
-    .hero-media{margin:22px auto 0;max-width:920px;animation:fadeUp 1.2s ease both}
-    .hero-media img{width:100%;display:block;border-radius:20px;border:1px solid #304260;box-shadow:var(--shadow)}
-
-    .grid{display:grid;gap:18px;grid-template-columns:repeat(12,1fr);margin:32px 0 38px}
-    .span-12{grid-column:span 12}.span-8{grid-column:span 8}.span-4{grid-column:span 4}
-
-    .card{
-      background:linear-gradient(180deg,var(--card),var(--card-2));
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:24px;
-      box-shadow:var(--shadow);
-      transition:transform .25s ease,border-color .25s ease;
-    }
-    .card:hover{transform:translateY(-5px);border-color:#43608e}
-
-    h2{margin:0 0 10px;font-size:1.48rem;color:#86efac}
-    h3{margin:0 0 10px;font-size:1.15rem;color:#93c5fd}
-    p{margin:.45rem 0;color:#d7dfeb}
-    ul{padding-left:20px;margin:.55rem 0}
-    li{margin:.34rem 0;color:#c9d4e5}
-    ol li{color:#e7edf8}
-
-    .price{font-size:1.24rem;color:#95c9fb;font-weight:700}
-    .note{margin-top:12px;padding:12px 14px;border-radius:12px;border:1px solid rgba(245,158,11,.4);background:rgba(245,158,11,.13);color:#fde68a}
-    .contact-box{margin-top:10px;border-left:4px solid var(--brand);padding-left:12px}
-    .trust{display:grid;gap:10px}
-    .tag{display:inline-block;width:fit-content;padding:8px 12px;border-radius:999px;border:1px solid #2f4263;background:#0d172c;color:#d7e4f8;font-size:.92rem}
-
-    /* TOC beautification */
-    .toc-card{
-      position:relative;
-      overflow:hidden;
-      background:
-        linear-gradient(180deg,rgba(34,197,94,.08),rgba(56,189,248,.06)),
-        linear-gradient(180deg,#0d1730,#0a1328);
-      border:1px solid #35507a;
-    }
-    .toc-head{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:12px}
-    .toc-pill{font-size:.8rem;padding:6px 10px;border-radius:999px;border:1px solid #43608e;background:#13213d;color:#bfdbfe}
-    .toc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;list-style:none;padding:0;margin:0}
-    .toc-grid li{margin:0}
-    .toc-grid a{
-      display:flex;align-items:center;gap:10px;
-      text-decoration:none;color:#dbeafe;
-      padding:10px 12px;border-radius:10px;
-      border:1px solid #324764;background:#101d36;
-      transition:.2s;
-      font-weight:600;
-    }
-    .toc-grid a:hover{background:#152748;border-color:#4b6792;transform:translateY(-1px)}
-    .toc-num{
-      min-width:24px;height:24px;display:inline-grid;place-items:center;
-      border-radius:999px;background:#1f3a64;border:1px solid #44689a;color:#dbeafe;font-size:.78rem;font-weight:700;
+    .tag {
+      display: inline-block;
+      font-size: .8rem;
+      font-weight: 700;
+      color: #dcfce7;
+      border: 1px solid #2f7b59;
+      background: rgba(34, 197, 94, .14);
+      border-radius: 999px;
+      padding: 6px 10px;
     }
 
-    .mid-image img{width:100%;display:block;border-radius:14px;border:1px solid #304260}
+    h1 { margin-top: 10px; font-size: clamp(2rem, 4.8vw, 3rem); line-height: 1.12; }
+    .lead { margin-top: 9px; color: var(--muted); max-width: 920px; margin-inline: auto; }
 
+    .top-points {
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .top-points div {
+      border: 1px solid #395f97;
+      border-radius: 10px;
+      background: #10213d;
+      padding: 10px;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .top-points div:hover { transform: translateY(-2px); border-color: #9dc2fb; }
+    .top-points strong { color: #93c5fd; display: block; font-size: .95rem; }
+    .top-points span { color: #c7d9f2; font-size: .86rem; }
 
-    .contact-title{font-size:clamp(1.6rem,3vw,2.1rem);margin-bottom:6px}
-    .contact-sub{color:#a9bdd8;margin-bottom:14px}
-    .contact-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:10px}
-    .contact-card{display:block;text-decoration:none;color:#e5edf8;border:1px solid #38527b;background:linear-gradient(180deg,#11203a,#0d1830);border-radius:14px;padding:14px;transition:.22s;box-shadow:0 8px 20px rgba(0,0,0,.25)}
-    .contact-card:hover{transform:translateY(-3px);border-color:#5f83b7}
-    .contact-icon{font-size:1.3rem;display:inline-grid;place-items:center;width:34px;height:34px;border-radius:10px;background:#1b3357;margin-bottom:8px}
-    .contact-name{display:block;font-weight:800;margin-bottom:4px}
-    .contact-value{color:#a7c7ff;font-weight:600;word-break:break-word}
+    .section-nav {
+      margin-top: 18px;
+      border: 1px solid #3a5f97;
+      border-radius: 14px;
+      background: #10203b;
+      padding: 12px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+    .section-nav a {
+      text-decoration: none;
+      color: #e3efff;
+      border: 1px solid #3f649f;
+      border-radius: 9px;
+      background: #132645;
+      text-align: center;
+      padding: 9px 8px;
+      font-size: .88rem;
+      font-weight: 600;
+      transition: transform .2s ease, background .2s ease;
+    }
+    .section-nav a:hover { transform: translateY(-2px); background: #1b3864; }
 
-    footer{text-align:center;padding:30px 0 52px;color:var(--muted);font-size:.92rem}
+    .layout {
+      margin: 16px 0 34px;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 12px;
+    }
+    .span-12 { grid-column: span 12; }
+    .span-8 { grid-column: span 8; }
+    .span-6 { grid-column: span 6; }
+    .span-4 { grid-column: span 4; }
 
-    @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-    @media (max-width:920px){
-      .span-8,.span-4{grid-column:span 12}
-      .toc-grid{grid-template-columns:1fr}
-      .contact-cards{grid-template-columns:1fr}
-      .hero{padding-top:62px}
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, var(--card), var(--card2));
+      box-shadow: var(--shadow);
+      padding: 18px;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .card:hover { transform: translateY(-2px); border-color: #8cb5f0; }
+
+    h2 { color: #86efac; font-size: 1.22rem; margin-bottom: 8px; }
+    p { color: #d5e4f8; margin-top: 6px; }
+    ul, ol { margin-top: 8px; padding-left: 18px; }
+    li { margin-top: 4px; color: #c6d9f4; }
+
+    .price {
+      margin-top: 7px;
+      border: 1px solid #3e629b;
+      border-radius: 9px;
+      background: #122642;
+      padding: 8px 10px;
+      color: #93c5fd;
+      font-weight: 700;
+      transition: transform .2s ease, background .2s ease;
+    }
+    .price:hover { transform: scale(1.02); background: #1a3861; }
+
+    .mini-grid {
+      margin-top: 8px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+    .mini-grid div {
+      border: 1px solid #3a6099;
+      border-radius: 10px;
+      background: #10223e;
+      padding: 10px;
+      color: #dbe9ff;
+      transition: transform .2s ease, border-color .2s ease;
+      font-size: .92rem;
+    }
+    .mini-grid div:hover { transform: translateY(-2px); border-color: #98bff8; }
+
+    .faq details {
+      margin-top: 8px;
+      border: 1px solid #3d639f;
+      border-radius: 10px;
+      background: #11233f;
+      padding: 10px 12px;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .faq details:hover { transform: translateY(-1px); border-color: #9fc4fe; }
+    .faq summary { cursor: pointer; font-weight: 700; color: #d9e9ff; }
+
+    footer { text-align: center; color: var(--muted); padding: 24px 0 34px; font-size: .9rem; }
+
+    @media (max-width: 980px) {
+      .top-points, .section-nav, .mini-grid { grid-template-columns: 1fr; }
+      .layout .span-8, .layout .span-6, .layout .span-4 { grid-column: span 12; }
     }
   </style>
 </head>
 <body>
-  <header class="hero container">
-    <span class="badge">✨ image document editing services</span>
-    <h1>Professional Image Document Editing Services for PDF Files</h1><p class="lead">
-Looking for reliable and high-quality image document editing services for your scanned or downloaded PDF files? 
-Our professional image document editing services are designed for international clients who need fast, accurate, and confidential document updates. 
-Whether your file is scanned, camera captured, downloaded from a website, or partially locked, our image document editing services ensure pixel-perfect editing with the same font, spacing, alignment, and color consistency.
-</p>
-
-<p class="lead">
-Our image document editing services are ideal for business documents, invoices, reports, agreements, academic files, and more. 
-We understand how important precision is, which is why our image document editing services focus on maintaining the original design integrity of your PDF.
-</p class="lead">
-
-<p class="lead">
-Privacy is a top priority in our image document editing services. 
-We follow a secure workflow to protect your files and ensure confidential handling of all documents. 
-If needed, our image document editing services also include metadata optimization for better file management and enhanced privacy.
-</p>
-
-
-    <div class="cta-row">
-      <a href="#section-3" class="btn btn-primary">🚀 Order Now</a>
-      <a href="#section-2" class="btn btn-secondary">💵 View Pricing</a>
-    </div>
-  </header>
-
   <main class="container">
-    <section class="grid">
-      <article class="card span-12 toc-card" id="toc">
-        <div class="toc-head">
-          <h2>📚 Table of Contents</h2>
-          <span class="toc-pill">Quick Navigation</span>
-        </div>
-        <ol class="toc-grid">
-          <li><a href="#section-1"><span class="toc-num">1</span>What We Edit</a></li>
-          <li><a href="#section-2"><span class="toc-num">2</span>Simple Pricing</a></li>
-          <li><a href="#section-3"><span class="toc-num">3</span>How to Order</a></li>
-          <li><a href="#section-4"><span class="toc-num">4</span>Why Clients Trust Us</a></li>
-          <li><a href="#section-5"><span class="toc-num">5</span>Why not use marketplaces only?</a></li>
-          <li><a href="#section-6"><span class="toc-num">6</span>Sample Work Image</a></li>
-          <li><a href="#section-7"><span class="toc-num">7</span>SEO Focus</a></li>
-          <li><a href="#section-8"><span class="toc-num">8</span>Important Legal & Ethical Policy</a></li>
-          <li><a href="#section-9"><span class="toc-num">9</span>Contact Us</a></li>
-        </ol>
-      </article>
+    <header class="hero">
+      <span class="tag">Web Design Service Post</span>
+      <h1>Professional Web Design Service Details (Keyword: Web Design)</h1>
+      <p class="lead">এই পেজটি এখন স্পষ্টভাবে <strong>web design service</strong> ভিত্তিক পোস্ট। এখানে service scope, price, workflow, quality standard, SEO value এবং বাস্তব implementation guideline দেওয়া হয়েছে।</p>
+      <p class="lead">আপনার request অনুযায়ী, প্রথম section-এ web design service সম্পর্কে বিস্তারিতভাবে লেখা হয়েছে এবং pricing section আবার যোগ করা হয়েছে।</p>
 
+      <div class="top-points">
+        <div><strong>Service Scope</strong><span>Complete design coverage</span></div>
+        <div><strong>Pricing</strong><span>Starter, Business, Premium</span></div>
+        <div><strong>Workflow</strong><span>Step-by-step delivery model</span></div>
+        <div><strong>SEO + UX</strong><span>Rankability and usability focus</span></div>
+      </div>
+    </header>
+
+    <nav class="section-nav">
+      <a href="#section-1">Service Details</a>
+      <a href="#section-2">Pricing</a>
+      <a href="#section-3">Workflow</a>
+      <a href="#section-4">Design Standards</a>
+      <a href="#section-5">Responsive</a>
+      <a href="#section-6">UX Value</a>
+      <a href="#section-7">SEO Value</a>
+      <a href="#section-8">Common Issues</a>
+      <a href="#section-9">Checklist</a>
+      <a href="#section-10">FAQ</a>
+    </nav>
+
+    <section class="layout">
       <article class="card span-8" id="section-1">
-        <h2>🧾  What We Edit</h2>
-        <p>We can help you update content in many document types, including scanned PDFs, camera-scanned PDFs, downloaded PDFs, and other editable business documents.</p>
+        <h2>1) Detailed Web Design Service Overview</h2>
+        <p><strong>Web design service</strong> means planning, structuring, and visually building website pages so users can read, trust, and take action easily. A professional web design service does not only create beautiful screens; it also creates clear user flow and business-focused layout.</p>
+        <p>In our web design service scope, we work on hero section planning, section hierarchy, CTA placement, typography, spacing rhythm, color consistency, responsive layout behavior, and readability optimization. The goal is to ensure your page looks modern and also performs well in real user conditions.</p>
+        <p>We also focus on conversion-focused structure: users should quickly understand your offer, browse key information without confusion, and reach inquiry/contact actions naturally. This is why web design service must combine UI beauty + UX clarity + business logic.</p>
         <ul>
-          <li>Name, address, date of birth, phone number, amount, date, and general text updates.</li>
-          <li>Image replacement and layout corrections.</li>
-          <li>Font matching, spacing alignment, and color consistency for professional results.</li>
-          <li>Cleanup and quality improvement for low-quality scans.</li>
+          <li>UI structure for trust and professional appearance</li>
+          <li>Layout planning for long-form service pages</li>
+          <li>Section-level optimization for readability</li>
+          <li>Mobile-friendly design behavior for all devices</li>
+          <li>SEO-aware heading and content architecture</li>
         </ul>
       </article>
 
       <aside class="card span-4" id="section-2">
-        <h2>💲 Simple Pricing</h2>
-        <p class="price">Easy edit: $10 / 1 page</p>
-        <p class="price">Hard edit: $20 / 2 page</p>
-        <p class="price">Complex edit: $30 / 3 page</p>
-        <p>Final cost depends on file quality, edit complexity, and urgency. Send your file first for an exact quote.</p>
+        <h2>2) Web Design Service Pricing</h2>
+        <p class="price">Starter Web Design — $99</p>
+        <p class="price">Business Web Design — $179</p>
+        <p class="price">Premium Web Design — $299</p>
+        <p>Final price depends on total sections, custom components, animation complexity, and delivery timeline.</p>
       </aside>
 
       <article class="card span-12" id="section-3">
-        <h2>📦  How to Order</h2>
+        <h2>3) Service Workflow</h2>
         <ol>
-          <li>Contact us via WhatsApp, Telegram, or Email.</li>
-          <li>Send your document and full editing instructions.</li>
-          <li>Receive confirmation, delivery time, and exact price.</li>
-          <li>After payment confirmation, we start the work immediately.</li>
+          <li>Share your business goal, audience, and preferred style.</li>
+          <li>Receive design structure draft and content hierarchy plan.</li>
+          <li>Approve visual direction and layout blocks.</li>
+          <li>Get complete responsive <strong>web design</strong> implementation.</li>
+          <li>Review, revise, and publish final version.</li>
         </ol>
-        <div class="contact-box">
-          <p><strong>Fast reply promise:</strong> We respond quickly and support urgent orders.</p>
+      </article>
+
+      <article class="card span-6" id="section-4">
+        <h2>4) Design Quality Standards</h2>
+        <div class="mini-grid">
+          <div>Consistent spacing and alignment system</div>
+          <div>Readable typography and hierarchy</div>
+          <div>Balanced color and contrast</div>
+          <div>Clean component styling</div>
         </div>
       </article>
 
-      <article class="card span-8" id="section-4">
-        <h2>✅  Why Clients Trust Us</h2>
-        <div class="trust">
-          <span class="tag">Quick response and clear communication</span>
-          <span class="tag">Urgent delivery available</span>
-          <span class="tag">Skilled team with 7+ years of experience</span>
-          <span class="tag">24/7 support</span>
-          <span class="tag">Easy payment options (Crypto, Western Union, Remitly, and more)</span>
-          <span class="tag">Optional video call before full payment</span>
-          <span class="tag">Client feedback and transparency</span>
+      <article class="card span-6" id="section-5">
+        <h2>5) Responsive Implementation</h2>
+        <p>A modern <strong>web design</strong> service must support desktop, tablet, and mobile. Each section should adapt without breaking readability or CTA visibility.</p>
+        <ul>
+          <li>Adaptive grid behavior</li>
+          <li>Flexible button and text scaling</li>
+          <li>Mobile-first spacing checks</li>
+          <li>Touch-friendly clickable elements</li>
+        </ul>
+      </article>
+
+      <article class="card span-12" id="section-6">
+        <h2>6) UX + Conversion Value</h2>
+        <p>Users decide quickly whether a website looks trustworthy. Better layout and UX clarity improve engagement and increase the chance of conversion.</p>
+        <div class="mini-grid">
+          <div>Clear CTA locations improve action rate</div>
+          <div>Clean sections reduce confusion</div>
+          <div>Professional visuals increase trust</div>
+          <div>Fast, simple structure improves retention</div>
         </div>
       </article>
 
-      <article class="card span-4" id="section-5">
-        <h3>🌍  Why not use marketplaces only?</h3>
-        <p>Platforms like Fiverr or Upwork are useful, but they may add extra fees and limit long-term direct communication. If you need a long-term editing partner, direct support can be faster and more flexible.</p>
+      <article class="card span-6" id="section-7">
+        <h2>7) SEO Value in Web Design</h2>
+        <p>Good web design supports SEO through better structure, semantic headings, mobile compatibility, and readable content blocks.</p>
       </article>
 
-      <article class="card span-12 mid-image" id="section-6">
-        <h2>🖼️  Sample Work Image</h2>
-        <img src="https://2nur.com/wp-content/uploads/2026/02/Untitled-9.png" alt="Document editing sample visual" loading="lazy" />
-      </article>
-
-      <article class="card span-12" id="section-7">
-        <h2>🔎Image Document Editing Services</h2>
-        <p>If you are searching for reliable <strong>image document editing services</strong>, our team offers speed, quality, and privacy for legal business use cases. We focus on readable formatting, accurate corrections, and professional presentation so your documents look clean and consistent.</p>
-      </article>
-
-      <article class="card span-12" id="section-8">
-        <h2>⚖️  Important Legal & Ethical Policy</h2>
-        <p class="note"><strong>Important:</strong> We only accept legal and ethical editing requests. We do <strong>not</strong> edit government IDs, passports, driving licenses, or any document for fraud, forgery, or illegal activity.</p>
+      <article class="card span-6" id="section-8">
+        <h2>8) Common Problems to Avoid</h2>
+        <ul>
+          <li>Too many styles without consistency</li>
+          <li>Overloaded sections with poor spacing</li>
+          <li>Low contrast text and weak readability</li>
+          <li>Ignoring mobile behavior</li>
+        </ul>
       </article>
 
       <article class="card span-12" id="section-9">
-        <h2 class="contact-title">💬  Let’s Connect — Contact Us Anytime</h2>
-        <p class="contact-sub">Choose your preferred channel below. We reply fast with quote, delivery time, and full support.</p>
-        <div class="contact-cards">
-          <a class="contact-card" href="https://wa.me/+8801750549445" target="_blank" rel="noopener">
-            <span class="contact-icon">🟢</span>
-            <span class="contact-name">WhatsApp</span>
-            <span class="contact-value"> +8801750549445</span>
-          </a>
-          <a class="contact-card" href="mailto:akternurasa@gmail.com">
-            <span class="contact-icon">📧</span>
-            <span class="contact-name">Gmail</span>
-            <span class="contact-value">akternurasa@gmail.com</span>
-          </a>
-          <a class="contact-card" href="https://t.me/nurtemplates" target="_blank" rel="noopener">
-            <span class="contact-icon">✈️</span>
-            <span class="contact-name">Telegram</span>
-            <span class="contact-value">@nurtemplates</span>
-          </a>
+        <h2>9) Pre-Publish Checklist</h2>
+        <div class="mini-grid">
+          <div>Is first screen clear and goal-focused?</div>
+          <div>Is service info easy to scan?</div>
+          <div>Are price and CTA visible?</div>
+          <div>Is layout mobile responsive?</div>
+          <div>Is keyword usage natural?</div>
+          <div>Does page load smoothly?</div>
         </div>
+      </article>
+
+      <article class="card span-12 faq" id="section-10">
+        <h2>10) FAQ</h2>
+        <details>
+          <summary>Did you add web design service details in the first section?</summary>
+          <p>Yes. Section 1 now contains a detailed explanation of web design service scope and outcomes.</p>
+        </details>
+        <details>
+          <summary>Did you add pricing again?</summary>
+          <p>Yes. Pricing is now clearly listed in Section 2.</p>
+        </details>
+        <details>
+          <summary>Is this still suitable for Elementor HTML block?</summary>
+          <p>Yes. The code is clean and structured for Elementor HTML placement.</p>
+        </details>
       </article>
     </section>
   </main>
 
-  <footer class="container">© 2026 Image Document Editing Services. All rights reserved. Legal and ethical requests only.</footer>
+  <footer>© 2026 • Web Design Service Post Layout</footer>
 </body>
 </html>
