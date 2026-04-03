@@ -3,380 +3,535 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web Design Services | Fast, Clean & Modern Website Design</title>
-  <meta name="description" content="Professional web design service with clean layout, responsive sections, light effects, hover interactions, pricing, workflow, and support details." />
-  <meta name="keywords" content="web design, responsive web design, website layout design, modern web design service" />
+  <title>Web Design Studio | Premium, Responsive & Conversion-Focused Design</title>
+  <meta name="description" content="Need modern web design? Explore our premium web design workflow, UI sections, pricing, timeline, quality process, and conversion-focused deliverables." />
+  <meta name="keywords" content="web design, premium web design, responsive website design, UI design service, landing page web design" />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Web Design Service | Clean & Responsive" />
-  <meta property="og:description" content="Lightweight web design landing page with modern sections and conversion-focused structure." />
+  <meta property="og:title" content="Web Design Studio | Modern UI & Responsive Layouts" />
+  <meta property="og:description" content="A modern web design landing page with rich content, premium layout, and responsive conversion-focused sections." />
   <meta property="og:type" content="article" />
   <style>
     :root {
-      --bg: #071022;
-      --bg2: #0b1730;
-      --card: #111f3c;
-      --line: #304d7f;
-      --text: #e9f2ff;
-      --muted: #a7bbda;
+      --bg: #060c1d;
+      --bg2: #0a1430;
+      --card: #101c38;
+      --line: #334f82;
+      --text: #e8f1ff;
+      --muted: #aabfdf;
       --brand: #22c55e;
       --brand2: #38bdf8;
-      --radius: 16px;
-      --shadow: 0 12px 26px rgba(0, 0, 0, 0.28);
+      --brand3: #a78bfa;
+      --radius: 18px;
+      --shadow: 0 12px 30px rgba(0, 0, 0, .32);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       color: var(--text);
-      line-height: 1.65;
+      line-height: 1.7;
       background:
-        radial-gradient(880px 420px at 8% -10%, rgba(56, 189, 248, .14), transparent 60%),
-        radial-gradient(860px 430px at 100% 0%, rgba(34, 197, 94, .13), transparent 58%),
-        linear-gradient(180deg, #040b1a, var(--bg));
+        radial-gradient(900px 420px at 8% -5%, rgba(56, 189, 248, .18), transparent 60%),
+        radial-gradient(900px 420px at 100% 0%, rgba(167, 139, 250, .16), transparent 58%),
+        linear-gradient(180deg, #030712, var(--bg));
     }
 
-    .container { width: min(1120px, 92%); margin: auto; }
-    .section { margin-top: 20px; }
+    .container { width: min(1140px, 92%); margin: auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(6px);
+      background: rgba(8, 15, 35, .75);
+      border-bottom: 1px solid #2f4775;
+    }
+
+    .topbar-inner {
+      min-height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      font-weight: 800;
+      color: #c4d9ff;
+      letter-spacing: .2px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #dbeafe;
+      font-size: .9rem;
+      border: 1px solid #36558b;
+      border-radius: 999px;
+      padding: 6px 11px;
+      background: #10203c;
+      transition: transform .2s ease, background .2s ease, border-color .2s ease;
+    }
+
+    .nav a:hover { transform: translateY(-2px); background: #18325e; border-color: #7aa3e6; }
 
     .hero {
-      padding: 64px 0 28px;
-      text-align: center;
+      padding: 58px 0 26px;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 18px;
+      align-items: stretch;
     }
 
-    .badge {
+    .hero-left,
+    .hero-right {
+      border: 1px solid #355584;
+      background: linear-gradient(180deg, #101d39, #0c1730);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+      transition: transform .25s ease, border-color .25s ease;
+    }
+
+    .hero-left:hover,
+    .hero-right:hover { transform: translateY(-3px); border-color: #7ca5e6; }
+
+    .tag {
       display: inline-block;
-      font-size: 13px;
+      font-size: .8rem;
       font-weight: 700;
       color: #dcfce7;
-      border: 1px solid #2f7d57;
-      background: rgba(34, 197, 94, .15);
+      border: 1px solid #2f7a59;
+      background: rgba(34, 197, 94, .14);
       border-radius: 999px;
-      padding: 7px 12px;
+      padding: 6px 10px;
+      margin-bottom: 10px;
     }
 
     h1 {
-      margin-top: 12px;
-      font-size: clamp(1.9rem, 4.8vw, 3rem);
-      line-height: 1.15;
+      font-size: clamp(2rem, 4.8vw, 3.1rem);
+      line-height: 1.12;
+      margin-bottom: 8px;
     }
 
-    .lead {
-      color: var(--muted);
-      max-width: 860px;
-      margin: 10px auto 0;
-    }
+    .lead { color: var(--muted); margin-top: 8px; }
 
-    .hero-actions {
-      margin-top: 16px;
+    .actions {
+      margin-top: 14px;
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
       gap: 10px;
+      flex-wrap: wrap;
     }
 
     .btn {
       text-decoration: none;
-      padding: 11px 18px;
-      border-radius: 10px;
       font-weight: 700;
-      transition: transform .2s ease, filter .2s ease, background .2s ease;
+      border-radius: 11px;
+      padding: 10px 16px;
+      transition: transform .2s ease, filter .2s ease;
     }
 
-    .btn-main {
-      color: #062018;
+    .btn-primary {
+      color: #052819;
       background: linear-gradient(120deg, #22c55e, #4ade80);
     }
 
-    .btn-sub {
+    .btn-secondary {
       color: #dbeafe;
-      border: 1px solid #3a5d94;
-      background: #12233f;
+      background: #142746;
+      border: 1px solid #3f629b;
     }
 
     .btn:hover { transform: translateY(-2px); filter: brightness(1.08); }
 
-    .stats {
-      margin-top: 18px;
+    .mini-stats {
+      margin-top: 16px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+      gap: 8px;
     }
 
-    .stat {
-      background: #10203c;
-      border: 1px solid #355485;
-      border-radius: 12px;
-      padding: 12px;
+    .mini-stats div {
+      border: 1px solid #355584;
+      border-radius: 10px;
+      background: #10203a;
+      padding: 10px;
       transition: transform .2s ease, border-color .2s ease;
     }
 
-    .stat:hover { transform: translateY(-3px); border-color: #5f86c2; }
-    .stat strong { display: block; color: #93c5fd; font-size: 1.05rem; }
-    .stat span { color: #bcd0ea; font-size: .9rem; }
+    .mini-stats div:hover { transform: translateY(-2px); border-color: #87b0ed; }
+    .mini-stats strong { color: #93c5fd; display: block; font-size: 1rem; }
+    .mini-stats span { color: #bdd1ef; font-size: .86rem; }
+
+    .showcase {
+      display: grid;
+      gap: 10px;
+      height: 100%;
+    }
+
+    .pane {
+      border: 1px solid #395d96;
+      border-radius: 12px;
+      background: #0f1f3b;
+      padding: 14px;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+
+    .pane:hover { transform: translateY(-2px); border-color: #8cb4ef; }
+
+    .pane h3 { color: #c7d2fe; margin-bottom: 5px; font-size: 1.02rem; }
+    .pane p { color: #c8daf4; font-size: .94rem; }
 
     .layout {
+      margin: 18px 0 35px;
       display: grid;
-      grid-template-columns: repeat(12, 1fr);
+      grid-template-columns: 260px 1fr;
       gap: 14px;
-      margin: 24px 0 36px;
+      align-items: start;
     }
 
-    .card {
-      background: linear-gradient(180deg, var(--card), var(--bg2));
-      border: 1px solid var(--line);
+    .side-card,
+    .main-card {
+      border: 1px solid #355785;
       border-radius: var(--radius);
+      background: linear-gradient(180deg, #101c36, #0c1730);
       box-shadow: var(--shadow);
       padding: 18px;
-      transition: transform .2s ease, border-color .2s ease;
+      transition: transform .22s ease, border-color .22s ease;
     }
 
-    .card:hover { transform: translateY(-3px); border-color: #648ecb; }
+    .side-card:hover,
+    .main-card:hover { transform: translateY(-2px); border-color: #7da6e5; }
+
+    .side-card {
+      position: sticky;
+      top: 78px;
+    }
+
+    .toc-title { color: #86efac; font-size: 1.1rem; margin-bottom: 8px; }
+
+    .toc {
+      list-style: none;
+      display: grid;
+      gap: 7px;
+      margin-top: 8px;
+    }
+
+    .toc a {
+      display: block;
+      text-decoration: none;
+      color: #e4efff;
+      border: 1px solid #365785;
+      border-radius: 9px;
+      background: #10213d;
+      padding: 8px 10px;
+      font-size: .9rem;
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .toc a:hover { transform: translateX(4px); background: #17345f; }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 12px;
+    }
 
     .span-12 { grid-column: span 12; }
     .span-8 { grid-column: span 8; }
     .span-6 { grid-column: span 6; }
     .span-4 { grid-column: span 4; }
 
-    h2 {
-      color: #86efac;
-      font-size: 1.28rem;
-      margin-bottom: 8px;
-    }
-
-    p { color: #d6e3f7; margin-top: 6px; }
-    ul, ol { padding-left: 18px; margin-top: 7px; }
-    li { margin-top: 4px; color: #c8daf4; }
-
-    .toc-list {
-      list-style: none;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px;
-      padding: 0;
-      margin-top: 10px;
-    }
-
-    .toc-list a {
-      display: block;
-      color: #e4efff;
-      text-decoration: none;
+    .box {
+      border: 1px solid var(--line);
+      border-radius: 14px;
       background: #10203b;
-      border: 1px solid #345582;
-      border-radius: 9px;
-      padding: 9px 10px;
-      transition: transform .2s ease, background .2s ease;
-      font-weight: 600;
-      font-size: .95rem;
-    }
-
-    .toc-list a:hover { transform: translateX(4px); background: #16305a; }
-
-    .price {
-      font-weight: 700;
-      color: #93c5fd;
-      margin-top: 8px;
-      padding: 7px 9px;
-      border: 1px solid #365888;
-      border-radius: 8px;
-      background: #10213d;
-      transition: transform .2s ease, background .2s ease;
-    }
-
-    .price:hover { transform: scale(1.02); background: #17325b; }
-
-    .grid-mini {
-      display: grid;
-      gap: 8px;
-      margin-top: 8px;
-    }
-
-    .grid-mini div {
-      border: 1px solid #345683;
-      border-radius: 10px;
-      background: #0f1e38;
-      padding: 9px 11px;
+      padding: 16px;
       transition: transform .2s ease, border-color .2s ease;
     }
 
-    .grid-mini div:hover { transform: translateY(-2px); border-color: #6d93cf; }
+    .box:hover { transform: translateY(-2px); border-color: #83aeea; }
+
+    h2 {
+      color: #86efac;
+      font-size: 1.25rem;
+      margin-bottom: 7px;
+    }
+
+    p { color: #d2e3fa; margin-top: 6px; }
+    ul, ol { margin-top: 8px; padding-left: 18px; }
+    li { color: #c5d8f4; margin-top: 4px; }
+
+    .price {
+      margin-top: 7px;
+      border: 1px solid #3b6099;
+      border-radius: 9px;
+      background: #122542;
+      padding: 8px 10px;
+      color: #93c5fd;
+      font-weight: 700;
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .price:hover { transform: scale(1.02); background: #193761; }
+
+    .cards-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .cards-3 div {
+      border: 1px solid #395f98;
+      border-radius: 10px;
+      background: #10213d;
+      padding: 10px;
+      font-size: .92rem;
+      color: #d7e7ff;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+
+    .cards-3 div:hover { transform: translateY(-2px); border-color: #8eb6f2; }
 
     .contact {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-top: 10px;
+      gap: 8px;
+      margin-top: 9px;
     }
 
     .contact a {
       text-decoration: none;
-      color: #eaf2ff;
-      border: 1px solid #3a5f98;
-      border-radius: 11px;
-      background: #10203d;
-      padding: 12px;
+      color: #e9f2ff;
+      border: 1px solid #3d6199;
+      border-radius: 10px;
+      background: #10213d;
+      padding: 11px;
       transition: transform .2s ease, border-color .2s ease;
     }
 
-    .contact a:hover { transform: translateY(-3px); border-color: #8bb2ef; }
-    .contact b { display: block; margin-bottom: 3px; }
+    .contact a:hover { transform: translateY(-2px); border-color: #9bc0fa; }
+    .contact b { display: block; margin-bottom: 4px; }
 
     .faq details {
       margin-top: 8px;
-      border: 1px solid #385c92;
+      border: 1px solid #3a5f99;
       border-radius: 10px;
-      background: #101f39;
+      background: #10203b;
       padding: 10px 12px;
-      transition: border-color .2s ease;
+      transition: border-color .2s ease, transform .2s ease;
     }
 
-    .faq details:hover { border-color: #83ace8; }
-    .faq summary { cursor: pointer; font-weight: 700; color: #cfe2ff; }
-    .faq p { margin-top: 8px; }
+    .faq details:hover { border-color: #95bcf8; transform: translateY(-1px); }
+    .faq summary { cursor: pointer; font-weight: 700; color: #d5e7ff; }
 
     footer {
       text-align: center;
       color: var(--muted);
-      padding: 24px 0 36px;
-      font-size: .9rem;
+      padding: 24px 0 38px;
+      font-size: .92rem;
     }
 
-    @media (max-width: 900px) {
-      .span-8, .span-6, .span-4 { grid-column: span 12; }
-      .stats, .toc-list, .contact { grid-template-columns: 1fr; }
-      .hero { padding-top: 50px; }
+    @media (max-width: 980px) {
+      .hero { grid-template-columns: 1fr; }
+      .layout { grid-template-columns: 1fr; }
+      .side-card { position: static; }
+      .content-grid .span-8,
+      .content-grid .span-6,
+      .content-grid .span-4 { grid-column: span 12; }
+      .cards-3,
+      .contact,
+      .mini-stats { grid-template-columns: 1fr; }
+      .topbar-inner { padding: 10px 0; }
     }
   </style>
 </head>
 <body>
-  <header class="hero container">
-    <span class="badge">✨ Clean & Fast Web Design Page</span>
-    <h1>Web Design Service with New Lightweight Layout</h1>
-    <p class="lead">You asked for a new layout with less heavy effects. This version is rebuilt for speed: cleaner structure, lighter CSS, simple transitions, and many hover interactions while keeping a modern visual style.</p>
-    <p class="lead">The page is optimized around the keyword <strong>web design</strong> and prepared for WordPress usage with easy-to-scan sections.</p>
-    <div class="hero-actions">
-      <a class="btn btn-main" href="#section-3">Start Project</a>
-      <a class="btn btn-sub" href="#section-2">View Pricing</a>
-    </div>
-    <div class="stats">
-      <div class="stat"><strong>Fast</strong><span>Reduced heavy animations</span></div>
-      <div class="stat"><strong>Responsive</strong><span>Mobile + desktop friendly</span></div>
-      <div class="stat"><strong>Modern</strong><span>Fresh web design layout</span></div>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">🌐 Web Design Studio</div>
+      <nav class="nav">
+        <a href="#section-1">Service</a>
+        <a href="#section-2">Pricing</a>
+        <a href="#section-3">Process</a>
+        <a href="#section-9">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section class="layout">
-      <article class="card span-12" id="toc">
-        <h2>Table of Contents</h2>
-        <ol class="toc-list">
-          <li><a href="#section-1">1. What This Web Design Includes</a></li>
-          <li><a href="#section-2">2. Pricing Plans</a></li>
-          <li><a href="#section-3">3. Order Workflow</a></li>
-          <li><a href="#section-4">4. Why This Layout is Better</a></li>
-          <li><a href="#section-5">5. Best Use Cases</a></li>
-          <li><a href="#section-6">6. Feature Blocks</a></li>
-          <li><a href="#section-7">7. SEO Value</a></li>
-          <li><a href="#section-8">8. Safe Use Policy</a></li>
-          <li><a href="#section-9">9. Contact</a></li>
-          <li><a href="#section-10">10. FAQ</a></li>
-        </ol>
-      </article>
+  <section class="container hero">
+    <article class="hero-left">
+      <span class="tag">Premium Web Design Experience</span>
+      <h1>Beautiful Web Design for High-Impact Digital Presence</h1>
+      <p class="lead">You asked for a more beautiful layout and more content. This new version uses a completely different structure: sticky top navigation, split hero, side navigation block, and rich multi-section content focused on <strong>web design</strong>.</p>
+      <p class="lead">The layout is optimized for readability, smart conversion flow, and easy WordPress usage while still staying performance-friendly with lightweight hover effects instead of heavy animation scripts.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#section-3">Start Web Design Project</a>
+        <a class="btn btn-secondary" href="#section-2">See Package Price</a>
+      </div>
+      <div class="mini-stats">
+        <div><strong>Design Quality</strong><span>Modern UI hierarchy and spacing</span></div>
+        <div><strong>Responsive</strong><span>Optimized for all major devices</span></div>
+        <div><strong>Conversion</strong><span>CTA-focused section architecture</span></div>
+      </div>
+    </article>
 
-      <article class="card span-8" id="section-1">
-        <h2>1) What This Web Design Includes</h2>
-        <p>This <strong>web design</strong> package includes modern section structure, strong CTA placement, readable content blocks, responsive cards, and clean hover behavior for better engagement.</p>
-        <ul>
-          <li>Conversion-friendly hero and CTA buttons</li>
-          <li>Simple and lightweight UI effects</li>
-          <li>Professional layout with consistent spacing</li>
-          <li>SEO-friendly heading and section order</li>
-        </ul>
-      </article>
-
-      <aside class="card span-4" id="section-2">
-        <h2>2) Pricing Plans</h2>
-        <p class="price">Starter Web Design — $80</p>
-        <p class="price">Business Web Design — $150</p>
-        <p class="price">Premium Web Design — $250</p>
-        <p>Final pricing depends on section count, custom components, and delivery timeline.</p>
-      </aside>
-
-      <article class="card span-12" id="section-3">
-        <h2>3) Order Workflow</h2>
-        <ol>
-          <li>Share project goal and target audience.</li>
-          <li>Choose design package and section requirements.</li>
-          <li>Receive structure draft and timeline.</li>
-          <li>Get final <strong>web design</strong> page ready for publish.</li>
-        </ol>
-      </article>
-
-      <article class="card span-6" id="section-4">
-        <h2>4) Why This New Layout is Better</h2>
-        <div class="grid-mini">
-          <div>Lower visual weight for faster loading</div>
-          <div>Simple effects instead of heavy animation scripts</div>
-          <div>More hover interactions across cards and links</div>
-          <div>Cleaner structure for mobile reading</div>
+    <aside class="hero-right">
+      <div class="showcase">
+        <div class="pane">
+          <h3>Visual Direction</h3>
+          <p>Clean typography, consistent spacing, and premium color contrast for better readability.</p>
         </div>
-      </article>
-
-      <article class="card span-6" id="section-5">
-        <h2>5) Best Use Cases</h2>
-        <p>This <strong>web design</strong> page fits agency offers, startup landing pages, portfolio websites, and business service posts where a clean and fast experience is required.</p>
-      </article>
-
-      <article class="card span-6" id="section-6">
-        <h2>6) Feature Blocks</h2>
-        <div class="grid-mini">
-          <div>Responsive section grid</div>
-          <div>Multiple hover effects</div>
-          <div>Lightweight CSS-only transitions</div>
-          <div>Simple native FAQ interaction</div>
+        <div class="pane">
+          <h3>Interaction Layer</h3>
+          <p>Hover-based micro interactions for links, cards, buttons, pricing blocks, and FAQ elements.</p>
         </div>
-      </article>
-
-      <article class="card span-6" id="section-7">
-        <h2>7) SEO Value</h2>
-        <p>Keyword usage is focused on <strong>web design</strong> in title, metadata, and main content sections while keeping text natural and readable.</p>
-      </article>
-
-      <article class="card span-6" id="section-8">
-        <h2>8) Safe Use Policy</h2>
-        <ul>
-          <li>Only legal, authorized website projects.</li>
-          <li>No deceptive, fraudulent, or prohibited content.</li>
-          <li>No unauthorized design copying.</li>
-        </ul>
-      </article>
-
-      <article class="card span-6" id="section-9">
-        <h2>9) Contact</h2>
-        <div class="contact">
-          <a href="https://wa.me/+8801750549445" target="_blank" rel="noopener"><b>WhatsApp</b>+8801750549445</a>
-          <a href="mailto:akternurasa@gmail.com"><b>Email</b>akternurasa@gmail.com</a>
-          <a href="https://t.me/nurtemplates" target="_blank" rel="noopener"><b>Telegram</b>@nurtemplates</a>
+        <div class="pane">
+          <h3>Business Focus</h3>
+          <p>Structured content to support agency offers, portfolio projects, startup pages, and service promotion.</p>
         </div>
-      </article>
+      </div>
+    </aside>
+  </section>
 
-      <article class="card span-12 faq" id="section-10">
-        <h2>10) FAQ</h2>
-        <details>
-          <summary>Is this version lighter than the previous design?</summary>
-          <p>Yes. This version removes heavy visual scripts and keeps effects simple with lightweight CSS transitions.</p>
-        </details>
-        <details>
-          <summary>Can I use this in WordPress post/page HTML?</summary>
-          <p>Yes, this structure is ready for WordPress custom HTML sections.</p>
-        </details>
-        <details>
-          <summary>Is this page optimized for the keyword web design?</summary>
-          <p>Yes. The page content and metadata are set around the keyword <strong>web design</strong>.</p>
-        </details>
-      </article>
+  <main class="container layout">
+    <aside class="side-card">
+      <h2 class="toc-title">Quick Menu</h2>
+      <ul class="toc">
+        <li><a href="#section-1">1. Web Design Scope</a></li>
+        <li><a href="#section-2">2. Pricing Plans</a></li>
+        <li><a href="#section-3">3. Workflow</a></li>
+        <li><a href="#section-4">4. New Layout Benefits</a></li>
+        <li><a href="#section-5">5. Design Use Cases</a></li>
+        <li><a href="#section-6">6. Deliverables</a></li>
+        <li><a href="#section-7">7. SEO + UX Value</a></li>
+        <li><a href="#section-8">8. Safe Use Policy</a></li>
+        <li><a href="#section-9">9. Contact</a></li>
+        <li><a href="#section-10">10. FAQ</a></li>
+      </ul>
+    </aside>
+
+    <section class="main-card">
+      <div class="content-grid">
+        <article class="box span-8" id="section-1">
+          <h2>1) What Our Web Design Service Covers</h2>
+          <p>Our <strong>web design</strong> service focuses on premium structure and user-first visual experience. We design pages that look beautiful, feel modern, and communicate business value clearly from first screen to final CTA.</p>
+          <ul>
+            <li>Hero strategy with clear offer statement and conversion CTA</li>
+            <li>Section hierarchy for storytelling, trust, and buyer intent</li>
+            <li>Modern card system for highlights, benefits, and service blocks</li>
+            <li>Consistent spacing and typography for better reading flow</li>
+            <li>Responsive behavior for mobile, tablet, and desktop</li>
+            <li>Lightweight effects that improve UI without performance drop</li>
+          </ul>
+        </article>
+
+        <aside class="box span-4" id="section-2">
+          <h2>2) Web Design Pricing Plans</h2>
+          <p class="price">Starter Web Design — $99</p>
+          <p class="price">Business Web Design — $189</p>
+          <p class="price">Advanced Web Design — $299</p>
+          <p>Pricing depends on section count, animation demand, content support, and turnaround speed.</p>
+        </aside>
+
+        <article class="box span-12" id="section-3">
+          <h2>3) End-to-End Workflow</h2>
+          <ol>
+            <li>Share your business niche, audience type, and design style preference.</li>
+            <li>Receive structure draft, section plan, and content map.</li>
+            <li>Approve layout direction and visual language.</li>
+            <li>We produce full responsive <strong>web design</strong> sections.</li>
+            <li>Final delivery with optimization and publish-ready HTML structure.</li>
+          </ol>
+        </article>
+
+        <article class="box span-6" id="section-4">
+          <h2>4) Why This New Layout Looks Better</h2>
+          <div class="cards-3">
+            <div>Split hero layout creates stronger first impression.</div>
+            <div>Sticky side menu improves long-page navigation.</div>
+            <div>Balanced typography improves readability.</div>
+          </div>
+          <p>This layout is fully different from the previous one, with a cleaner modern structure and richer section flow.</p>
+        </article>
+
+        <article class="box span-6" id="section-5">
+          <h2>5) High-Value Use Cases</h2>
+          <p>This <strong>web design</strong> format is ideal for agencies, personal brands, SaaS landing pages, app showcases, consultants, digital products, and creative portfolios.</p>
+          <ul>
+            <li>Agency service landing pages</li>
+            <li>Startup pre-launch websites</li>
+            <li>Personal portfolio pages</li>
+            <li>Service-focused WordPress post pages</li>
+          </ul>
+        </article>
+
+        <article class="box span-12" id="section-6">
+          <h2>6) Deliverables & Quality Standards</h2>
+          <div class="cards-3">
+            <div>Responsive design structure</div>
+            <div>Clean, organized HTML/CSS blocks</div>
+            <div>Hover-ready interactive elements</div>
+          </div>
+          <p>Each section is designed for visual consistency, SEO readability, and practical implementation inside WordPress custom HTML areas.</p>
+        </article>
+
+        <article class="box span-6" id="section-7">
+          <h2>7) SEO + UX + Conversion Value</h2>
+          <p>The keyword <strong>web design</strong> is naturally used in metadata, headings, and content paragraphs. Combined with clear hierarchy and CTA placement, this structure supports both discoverability and user action.</p>
+        </article>
+
+        <article class="box span-6" id="section-8">
+          <h2>8) Safe Use Policy</h2>
+          <ul>
+            <li>Only legal and authorized website projects are accepted.</li>
+            <li>No deceptive content or misleading service claims.</li>
+            <li>No unauthorized design copying from protected assets.</li>
+          </ul>
+        </article>
+
+        <article class="box span-12" id="section-9">
+          <h2>9) Contact Channels</h2>
+          <p>Share your references, content brief, and section needs through any channel:</p>
+          <div class="contact">
+            <a href="https://wa.me/+8801750549445" target="_blank" rel="noopener"><b>WhatsApp</b>+8801750549445</a>
+            <a href="mailto:akternurasa@gmail.com"><b>Email</b>akternurasa@gmail.com</a>
+            <a href="https://t.me/nurtemplates" target="_blank" rel="noopener"><b>Telegram</b>@nurtemplates</a>
+          </div>
+        </article>
+
+        <article class="box span-12 faq" id="section-10">
+          <h2>10) Frequently Asked Questions</h2>
+          <details>
+            <summary>Is this layout completely different from the previous design?</summary>
+            <p>Yes. This version uses a new split-hero + side-menu content layout to provide a more premium look and better long-page navigation.</p>
+          </details>
+          <details>
+            <summary>Did you increase content as requested?</summary>
+            <p>Yes. The page now includes more detailed service scope, workflow, use cases, deliverables, and richer explanatory copy.</p>
+          </details>
+          <details>
+            <summary>Is this still lightweight for performance?</summary>
+            <p>Yes. Effects are hover-based CSS transitions only, without heavy animation scripts or external asset dependencies.</p>
+          </details>
+          <details>
+            <summary>Is this optimized for the keyword web design?</summary>
+            <p>Yes. The keyword <strong>web design</strong> is integrated in title, meta tags, headings, and key content areas naturally.</p>
+          </details>
+        </article>
+      </div>
     </section>
   </main>
 
-  <footer>© 2026 • Lightweight Web Design Post Layout</footer>
+  <footer>© 2026 • Premium Web Design Landing Structure • Ready for WordPress Use</footer>
 </body>
 </html>
