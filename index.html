@@ -3,181 +3,230 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free Generator Premium Hub | Invoice, Letterhead & CV</title>
-  <meta name="description" content="Premium free generator page with three cards: invoice generator, letterhead generator, and CV generator. Creative and professional with simple animation and glow effects." />
+  <title>Free Generator | Invoice, Letterhead & CV Tools</title>
+  <meta name="description" content="Professional free generator page with invoice, letterhead, and CV generators. Clean black background, icon cards, animated title underline, and smooth hover effects." />
   <style>
     :root {
-      --text: #e8f4ff;
-      --muted: #b9cde7;
-      --line: rgba(0, 212, 255, 0.35);
-      --panel: rgba(14, 27, 54, 0.86);
-      --panel-2: rgba(9, 18, 39, 0.92);
-      --accent: #00d4ff;
-      --accent-soft: #8de8ff;
-      --violet: #b49bff;
+      --bg: #050505;
+      --panel: #0d1220;
+      --panel-2: #121a2c;
+      --line: #1e9ed8;
+      --text: #eaf4ff;
+      --muted: #b6c9df;
+      --accent: #71e8ff;
+      --accent-2: #a6b8ff;
       --radius: 18px;
-      --glow: 0 0 0 1px rgba(0, 212, 255, 0.24), 0 14px 34px rgba(0, 0, 0, 0.45), 0 0 30px rgba(0, 212, 255, 0.13);
+      --shadow: 0 12px 30px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(30, 158, 216, 0.35);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       font-family: Inter, "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
       color: var(--text);
       line-height: 1.65;
-      background: radial-gradient(circle at top, rgba(0, 212, 255, 0.08) 0%, rgba(6, 10, 22, 1) 70%);
       min-height: 100vh;
       overflow-x: hidden;
     }
 
-    .container { width: min(1160px, 92%); margin-inline: auto; }
+    .container { width: min(1180px, 92%); margin-inline: auto; }
 
     .hero {
-      margin-top: 26px;
-      border: 1px solid var(--line);
+      margin: 28px 0 18px;
+      padding: 42px 30px;
       border-radius: 24px;
-      background: linear-gradient(150deg, rgba(15, 33, 67, 0.9), rgba(10, 19, 43, 0.95));
-      padding: 38px 28px;
+      border: 1px solid var(--line);
+      background: linear-gradient(145deg, #111b31, #0b1223 60%, #0a0f1b);
+      box-shadow: 0 0 0 1px rgba(113, 232, 255, 0.4), 0 20px 45px rgba(0, 0, 0, 0.58), 0 0 42px rgba(113, 232, 255, 0.22);
       text-align: center;
-      box-shadow: 0 0 0 1px rgba(0, 212, 255, 0.3), 0 18px 45px rgba(0, 0, 0, 0.52), 0 0 50px rgba(0, 212, 255, 0.2);
-      animation: heroGlow 3.8s ease-in-out infinite alternate;
+      animation: heroPulse 4s ease-in-out infinite alternate;
     }
 
-    @keyframes heroGlow {
-      from { box-shadow: 0 0 0 1px rgba(0, 212, 255, 0.28), 0 18px 45px rgba(0, 0, 0, 0.52), 0 0 34px rgba(0, 212, 255, 0.16); }
-      to { box-shadow: 0 0 0 1px rgba(0, 212, 255, 0.45), 0 20px 55px rgba(0, 0, 0, 0.62), 0 0 62px rgba(0, 212, 255, 0.28); }
+    @keyframes heroPulse {
+      from {
+        box-shadow: 0 0 0 1px rgba(113, 232, 255, 0.34), 0 20px 45px rgba(0, 0, 0, 0.58), 0 0 32px rgba(113, 232, 255, 0.16);
+      }
+      to {
+        box-shadow: 0 0 0 1px rgba(113, 232, 255, 0.56), 0 24px 55px rgba(0, 0, 0, 0.68), 0 0 62px rgba(113, 232, 255, 0.28);
+      }
     }
 
-    .badge {
+    .pill {
       display: inline-block;
-      padding: 6px 12px;
-      border: 1px solid rgba(0, 212, 255, 0.56);
-      border-radius: 999px;
-      background: rgba(0, 212, 255, 0.09);
-      font-size: .78rem;
-      text-transform: uppercase;
-      letter-spacing: .08em;
+      font-size: .76rem;
       font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      border: 1px solid rgba(113, 232, 255, 0.65);
+      color: #d9f7ff;
+      background: rgba(113, 232, 255, 0.08);
+      border-radius: 999px;
+      padding: 7px 12px;
     }
 
-    h1 { margin-top: 12px; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.12; }
-    .hero p { max-width: 850px; margin: 12px auto 0; color: var(--muted); }
+    h1 {
+      margin-top: 14px;
+      font-size: clamp(2rem, 5vw, 3.1rem);
+      line-height: 1.12;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
 
-    .premium-strip {
+    h1::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, transparent, var(--accent), var(--accent-2), transparent);
+      animation: titleLine 2.6s linear infinite;
+      background-size: 220% 100%;
+    }
+
+    @keyframes titleLine {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 220% 50%; }
+    }
+
+    .hero p { margin: 12px auto 0; max-width: 860px; color: var(--muted); }
+
+    .stats {
       margin-top: 18px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
     }
 
-    .premium-item {
-      border: 1px solid rgba(0, 212, 255, 0.35);
+    .stat {
+      border: 1px solid rgba(113, 232, 255, 0.35);
       border-radius: 12px;
-      padding: 12px;
-      background: rgba(10, 24, 48, 0.9);
-      font-weight: 600;
-      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
-    }
-
-    .premium-item:hover {
-      transform: translateY(-3px);
-      border-color: rgba(0, 212, 255, 0.7);
-      box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
-    }
-
-    .nav {
-      margin: 18px 0;
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 9px;
-    }
-
-    .nav a {
-      text-decoration: none;
-      color: #e5f4ff;
-      font-size: .9rem;
-      font-weight: 700;
-      text-align: center;
-      border: 1px solid var(--line);
-      border-radius: 10px;
       padding: 10px;
-      background: rgba(13, 25, 52, 0.9);
-      transition: all .22s ease;
+      background: rgba(14, 24, 45, 0.9);
+      font-weight: 600;
     }
 
-    .nav a:hover { transform: translateY(-2px); box-shadow: 0 0 16px rgba(0, 212, 255, 0.18); border-color: rgba(0, 212, 255, 0.75); }
+    .section-title {
+      margin: 18px 0 10px;
+      font-size: 1.05rem;
+      color: #d5e9ff;
+      font-weight: 700;
+      letter-spacing: .03em;
+    }
 
-    .layout {
+    .grid {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       gap: 14px;
-      margin-bottom: 30px;
+      margin-bottom: 26px;
     }
 
     .card {
-      grid-column: span 12;
-      border: 1px solid var(--line);
+      grid-column: span 4;
+      border: 1px solid rgba(30, 158, 216, 0.55);
       border-radius: var(--radius);
-      background: linear-gradient(165deg, var(--panel), var(--panel-2));
-      box-shadow: var(--glow);
-      padding: 18px;
-      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+      background: linear-gradient(160deg, var(--panel), var(--panel-2));
+      box-shadow: var(--shadow);
+      padding: 20px;
+      transition: transform .24s ease, border-color .24s ease, box-shadow .24s ease;
     }
 
     .card:hover {
       transform: translateY(-4px);
-      border-color: rgba(0, 212, 255, 0.7);
-      box-shadow: 0 0 0 1px rgba(0, 212, 255, 0.4), 0 18px 36px rgba(0, 0, 0, 0.45), 0 0 25px rgba(0, 212, 255, 0.2);
+      border-color: #66d8ff;
+      box-shadow: 0 0 0 1px rgba(113, 232, 255, 0.46), 0 18px 34px rgba(0, 0, 0, 0.5), 0 0 25px rgba(113, 232, 255, 0.2);
     }
 
-    .span-12 { grid-column: span 12; }
-    .span-6 { grid-column: span 6; }
-    .span-4 { grid-column: span 4; }
+    .icon-wrap {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      border: 1px solid rgba(113, 232, 255, 0.55);
+      display: grid;
+      place-items: center;
+      margin-bottom: 12px;
+      background: rgba(113, 232, 255, 0.09);
+      box-shadow: 0 0 15px rgba(113, 232, 255, 0.15);
+    }
 
-    h2 { color: var(--accent-soft); font-size: 1.35rem; margin-bottom: 8px; }
-    h3 { color: #d0c2ff; font-size: 1.03rem; margin-bottom: 6px; margin-top: 10px; }
-    p { color: #d4e8ff; margin-top: 6px; }
+    .icon-wrap svg { width: 24px; height: 24px; fill: #8eefff; }
 
-    ul { margin-top: 7px; padding-left: 18px; }
-    li { margin-top: 4px; color: #d9ecff; }
+    h2 {
+      font-size: 1.34rem;
+      color: var(--accent);
+      margin-bottom: 8px;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 6px;
+    }
 
-    .cta {
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(113, 232, 255, 0.8), rgba(166, 184, 255, 0.9));
+      transform-origin: left;
+      transform: scaleX(.25);
+      transition: transform .28s ease;
+    }
+
+    .card:hover h2::after { transform: scaleX(1); }
+
+    p { color: #d9eaff; }
+
+    ul { margin-top: 8px; padding-left: 18px; }
+    li { color: #d7e9ff; margin-top: 4px; }
+
+    .button {
       display: inline-block;
       margin-top: 12px;
       text-decoration: none;
+      color: #072131;
       font-weight: 700;
-      color: #082334;
-      background: linear-gradient(120deg, #79ecff, #9ec6ff);
       border-radius: 10px;
+      background: linear-gradient(120deg, #78ecff, #a7baff);
       padding: 10px 14px;
-      transition: transform .2s ease, box-shadow .2s ease;
+      transition: transform .22s ease, box-shadow .22s ease;
     }
 
-    .cta:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(0, 212, 255, 0.26); }
-
-    .mini-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin-top: 10px;
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(113, 232, 255, 0.26);
     }
 
-    .mini {
-      border: 1px solid rgba(0, 212, 255, 0.35);
-      border-radius: 12px;
-      padding: 12px;
-      background: rgba(15, 31, 62, 0.88);
+    .row-card {
+      grid-column: span 6;
+      border: 1px solid rgba(30, 158, 216, 0.5);
+      border-radius: var(--radius);
+      background: linear-gradient(160deg, #0f182d, #0b1325);
+      box-shadow: var(--shadow);
+      padding: 18px;
     }
 
-    footer { text-align: center; color: #9db9d8; padding: 8px 0 30px; }
+    .row-card h3 {
+      color: #d5caff;
+      margin-bottom: 6px;
+      font-size: 1.08rem;
+    }
+
+    .row-card p { color: var(--muted); }
+
+    footer {
+      text-align: center;
+      color: #8ea4c0;
+      padding: 8px 0 32px;
+      font-size: .92rem;
+    }
 
     @media (max-width: 980px) {
-      .premium-strip, .nav { grid-template-columns: repeat(2, 1fr); }
-      .span-6, .span-4 { grid-column: span 12; }
-    }
-
-    @media (max-width: 600px) {
-      .premium-strip, .nav, .mini-grid { grid-template-columns: 1fr; }
-      .hero { padding: 30px 18px; }
+      .stats { grid-template-columns: 1fr; }
+      .card, .row-card { grid-column: span 12; }
     }
   </style>
 </head>
@@ -186,123 +235,75 @@
 
   <main class="container">
     <header class="hero">
-      <span class="badge">Premium Toolkit</span>
-      <h1>Free Generator Premium Page for Modern Business & Career</h1>
-      <p>Apnar request অনুযায়ী এই নতুন design premium look-e build করা হয়েছে—clean card layout, controlled glow, simple animation, and strong professional tone.</p>
-      <p>এই <strong>free generator</strong> hub-এর ভেতরে three main cards আছে: Invoice Generator, Letterhead Generator, and CV Generator.</p>
-
-      <div class="premium-strip">
-        <div class="premium-item">Premium Hero Glow Effect</div>
-        <div class="premium-item">Creative Card Interaction</div>
-        <div class="premium-item">Professional Simple Animation</div>
+      <span class="pill">2nur.com Free Tools</span>
+      <h1>Free Generator Studio</h1>
+      <p>A clean and premium one-page experience for business and career documents. This page is now fully in English, with a black background, improved visual contrast, icon-based cards, and smooth micro-animations.</p>
+      <div class="stats">
+        <div class="stat">3 Core Generators</div>
+        <div class="stat">Modern Premium UI</div>
+        <div class="stat">Fast & Clear Workflow</div>
       </div>
     </header>
 
-    <nav class="nav">
-      <a href="#overview">Overview</a>
-      <a href="#invoice">Invoice</a>
-      <a href="#letterhead">Letterhead</a>
-      <a href="#cv">CV</a>
-      <a href="#extra">More Sections</a>
-    </nav>
+    <div class="section-title">Core Generator Cards</div>
 
-    <section class="layout">
-      <article class="card span-12" id="overview">
-        <h2>Free Generator Overview</h2>
-        <p>Eta ekta premium-style <strong>free generator</strong> page. Section-gula short রাখা হয়েছে jeno akta জায়গায় beshi text na hoy. User quick scan kore easily বুঝতে পারবে কোন card-e click করতে হবে.</p>
-        <h3>Free Generator Quick Benefits</h3>
-        <ul>
-          <li>Three important generators in one page</li>
-          <li>Less clutter, more clarity</li>
-          <li>Business-ready visual quality</li>
-        </ul>
-      </article>
-
-      <article class="card span-4" id="invoice">
-        <h2>Free Generator: Invoice Card</h2>
-        <p>Client billing-এর জন্য invoice card ready. পরিষ্কার line item, subtotal, tax, and total structure focus করা হয়েছে.</p>
-        <h3>Invoice Section Focus</h3>
-        <ul>
-          <li>Fast billing flow</li>
-          <li>Clear payment details</li>
-          <li>Professional appearance</li>
-        </ul>
-        <a class="cta" href="#">Open Invoice Generator</a>
-      </article>
-
-      <article class="card span-4" id="letterhead">
-        <h2>Free Generator: Letterhead Card</h2>
-        <p>Official document-এর branding improve করার জন্য letterhead card. Header + footer structure clean, minimal, and corporate-friendly.</p>
-        <h3>Letterhead Section Focus</h3>
-        <ul>
-          <li>Brand identity clarity</li>
-          <li>Formal communication look</li>
-          <li>Print + PDF friendly style</li>
-        </ul>
-        <a class="cta" href="#">Open Letterhead Generator</a>
-      </article>
-
-      <article class="card span-4" id="cv">
-        <h2>Free Generator: CV Card</h2>
-        <p>Career profile present করার জন্য clean CV card. Recruiter-friendly spacing and section order রাখা হয়েছে.</p>
-        <h3>CV Section Focus</h3>
-        <ul>
-          <li>ATS-aware formatting style</li>
-          <li>Readable skill & experience blocks</li>
-          <li>Interview-ready presentation</li>
-        </ul>
-        <a class="cta" href="#">Open CV Generator</a>
-      </article>
-
-      <article class="card span-6" id="extra">
-        <h2>Free Generator Design Section</h2>
-        <p>Hero glow extra strong করা হয়েছে jeno first view-tei premium feel আসে. Hover effect controlled রাখা হয়েছে যাতে professional থাকে.</p>
-        <div class="mini-grid">
-          <div class="mini">
-            <h3>Glow Balance</h3>
-            <p>Soft cyan glow + deep background contrast for elegant depth.</p>
-          </div>
-          <div class="mini">
-            <h3>Simple Motion</h3>
-            <p>Animation is subtle and smooth, not distracting.</p>
-          </div>
+    <section class="grid">
+      <article class="card">
+        <div class="icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm2 4v2h12V7H6zm0 5v2h7v-2H6zm0 5v2h12v-2H6z"/></svg>
         </div>
-        <p>Letterhead Generator আপনার অফিসিয়াল communication ke next level-e নিয়ে যায়. Proposal, official letter, quotation response, HR communication—যেকোনো formal document-e branded letterhead থাকলে credibility instantly increase করে. এই অংশে business name, logo area, address line, phone/email, website, and optional tagline block use করে balanced layout তৈরি করা যায়.</p>
-        <h3>Free generator letterhead design advantages</h3>
+        <h2>Free Generator: Invoice</h2>
+        <p>Create structured, professional invoices with clear line items, totals, and payment details. Great for freelancers, agencies, and service businesses.</p>
         <ul>
-          <li>Professional top header structure with strong alignment</li>
-          <li>Footer contact strip for complete brand presentation</li>
-          <li>Color harmony that works in screen and print mode</li>
-          <li>Minimal decorative line options for elegant personality</li>
+          <li>Quick billing layout</li>
+          <li>Clean subtotal and total blocks</li>
+          <li>Professional client-ready output</li>
         </ul>
-        <p>Simple animation use করা হয়েছে শুধু section reveal এবং hover-lift এ, so page never feels noisy. Letterhead-এর beauty আসে whitespace থেকে; তাই এই template style intentionally clutter-free. আপনার brand যদি modern, legal, academic, healthcare, or corporate tone follow করে, এই <strong>free generator</strong> block adapt করতে খুব easy হবে.</p>
-        <a class="cta" href="#top">Create Letterhead</a>
+        <a class="button" href="#">Open Invoice Generator</a>
       </article>
 
-      <article class="card span-6">
-        <h2>Free Generator Content Section</h2>
-        <p>Apnar feedback অনুযায়ী long paragraph ভেঙে multiple ছোট section করা হয়েছে. এতে readability বাড়ে এবং page dekhte অনেক clean লাগে.</p>
-        <div class="mini-grid">
-          <div class="mini">
-            <h3>Short Copy Blocks</h3>
-            <p>Each section has brief, useful copy.</p>
-          </div>
-          <div class="mini">
-            <h3>Premium Card Rhythm</h3>
-            <p>Spacing and card height balanced for better visual flow.</p>
-          </div>
+      <article class="card">
+        <div class="icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M3 4h18v4H3V4zm2 6h14v10H5V10zm3 2v2h8v-2H8zm0 4v2h5v-2H8z"/></svg>
         </div>
+        <h2>Free Generator: Letterhead</h2>
+        <p>Build polished letterhead documents with a professional header, contact details, and a clean brand presentation for official communication.</p>
+        <ul>
+          <li>Corporate header style</li>
+          <li>Balanced spacing for print and PDF</li>
+          <li>Simple, trusted visual identity</li>
+        </ul>
+        <a class="button" href="#">Open Letterhead Generator</a>
       </article>
 
-      <article class="card span-12">
-        <h2>Free Generator Final Section</h2>
-        <p>এই updated version-এ design আরো premium, sections আরো বেশি, and each card compact রাখা হয়েছে. Background color আপনার দেওয়া exact gradient, hero glow stronger, and overall look creative + professional.</p>
+      <article class="card">
+        <div class="icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 2c-3.33 0-7 1.67-7 4v2h14v-2c0-2.33-3.67-4-7-4z"/></svg>
+        </div>
+        <h2>Free Generator: CV</h2>
+        <p>Design professional CVs with consistent sections for profile, skills, experience, and education. Optimized for readability and hiring teams.</p>
+        <ul>
+          <li>Modern career-focused format</li>
+          <li>Easy-to-scan content blocks</li>
+          <li>Interview-ready style</li>
+        </ul>
+        <a class="button" href="#">Open CV Generator</a>
+      </article>
+
+      <article class="row-card">
+        <h3>Premium Visual Improvements</h3>
+        <p>The new design uses a pure black page base, brighter title contrast, refined glow around hero and cards, and animated underlines for headings to create a modern premium feel.</p>
+      </article>
+
+      <article class="row-card">
+        <h3>Cleaner Content Structure</h3>
+        <p>Long mixed-language blocks were removed. Each section now has concise English copy, clear icon support, and focused benefit points for better readability.</p>
       </article>
     </section>
   </main>
 
   <footer>
-    Free Generator Premium Layout • Invoice • Letterhead • CV
+    2nur.com • Free Generator • Invoice • Letterhead • CV
   </footer>
 </body>
 </html>
